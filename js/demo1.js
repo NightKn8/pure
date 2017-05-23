@@ -1,6 +1,6 @@
 let $scrollPrev = 0;
 const $navHeight = () => $("nav .container-fluid").outerHeight(true),
-  $viewBottom = () => $(window).scrollTop() + $(window).height(),
+  $viewBottom = () => $(window).scrollTop() + $(window).innerHeight(),
   $parallaxIllusion = () => {
     const $pxTop = $(".parallaxTop"),
       $pxMid = $(".parallaxMiddle"),

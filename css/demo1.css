@@ -21,6 +21,10 @@
   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html {
+  width: 100%;
+}
+
 body {
   position: relative;
   font-family: "PT Sans";
@@ -258,7 +262,7 @@ i[class*='database'] {
 }
 
 .calendarBody p {
-  font-size: 45px;
+  font-size: 40px;
   padding: 0 70px;
   color: #313131;
 }
@@ -504,22 +508,26 @@ i[class*='comment'] {
 }
 
 .wood::before {
-  display: block;
+  display: inline-block;
+  position: relative;
   content: '';
-  background: url('../img/demo1/border.png') repeat;
+  background: url('../img/demo1/border.png') repeat-x;
+  top:-1px;
   width: 100%;
-  height: 43px;
+  height: 42px;
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .wood::after {
-  display: block;
+  display: inline-block;
+  position: relative;
   content: '';
-  background: url('../img/demo1/border.png') repeat;
+  background: url('../img/demo1/border.png') repeat-x;
+  bottom:-10px;
   width: 100%;
-  height: 43px;
+  height: 42px;
 }
 
 .wood h1 {
@@ -580,6 +588,7 @@ i[class*='comment'] {
 
 .tab-content img {
   position: relative;
+  left: -30px;
   width: 700px;
 }
 
@@ -640,6 +649,52 @@ i[class*='chevron'] {
 .dark p:last-of-type {
   margin: 0;
   font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .blackBoard {
+    padding-bottom: 115px;
+  }
+  i[class*='calendar'] {
+    font-size: 320px;
+    top: -115px;
+    right: 0px;
+  }
+  .calendarBody p {
+    font-size: 30px;
+  }
+  .calendarContent h1 {
+    position: relative;
+    font-size: 35px;
+    left: 13px;
+    top: -33px;
+  }
+  i[class*='comment'] {
+    font-size: 300px;
+  }
+  .circleChart::before {
+    content: '';
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+  }
+  .circleChart {
+    width: 320px;
+    height: 390px;
+    border-radius: 320px;
+  }
+  .circleChart::after {
+    content: attr(data-value);
+    width: 220px;
+    height: 220px;
+    border-radius: 220px;
+  }
+  .nav-pills {
+    font-size: 16px;
+  }
+  .tab-content p {
+    font-size: 25px;
+    }
 }
 
 @-webkit-keyframes affixExpand {
