@@ -1,12 +1,121 @@
 <!DOCTYPE html>
-<html lang = "pl-PL">
-<head>
-	<title>Test WWW</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="script.js"></script>
-</head>
-<body>
-	test
-</body>
+<html lang="en-US">
+
+  <head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3f1569">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3f1569">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header role="banner">
+      <section data-title="About Me">
+        <article class="info md c">
+          <img src="img/main/me.jpg" class="myPic" alt="This is me">
+          <h1>Hello, nice to meet you!</h1>
+          <p>I'm Chris and this is my portfolio page. On regular basis I do programing, networking, photoshoping and annoying my adorable cat.
+            <br>Thank you for coming over and feel free to look around.
+          </p>
+        </article>
+      </section>
+    </header>
+    <nav role="navigation">
+      <ol class="navigation l">
+        <li class="menuitem md l"><i class="material-icons">menu</i></li>
+        <li class="r dn">
+          <progress value="" max=""></progress>
+          <progress value="" max=""></progress>
+        </li>
+      </ol>
+    </nav>
+    <main role="main">
+      <section data-title="My Skills">
+        <article>
+          <h1>My Skils</h1>
+          <p>Please have a look of what I am capable of. From the bottom 1 till the top of 4 stars this is where I see myself in each technology. I admit that at cenrtain points you may catch me on something obvious, yet I find this as grate oppotionyty
+            for an improvment.</p>
+        </article>
+        <aside class="skils up">
+          <ol class="md c">
+            <li class="starhead md c"><i class="material-icons md-24">star</i></li>
+            <li class="item md c phpBlue">PHP</li>
+            <li class="item md c nodeGreen">Node.js</li>
+            <li class="item md c glBrown">WebGL</li>
+          </ol>
+          <ol class="md c">
+            <li class="starhead md c"><i class="material-icons md-24">star star</i></li>
+            <li class="item md c sqlOrange">MySQL</li>
+            <li class="item md c queryBlue">jQuery</li>
+          </ol>
+          <ol class="md c">
+            <li class="starhead md c"><i class="material-icons md-24">star star star</i></li>
+            <li class="item md c jsYellow">Java Script</li>
+            <li class="item md c strapViolet">Bootstrap</li>
+          </ol>
+          <ol class="md c">
+            <li class="starhead md c"><i class="material-icons md-24">star star star star</i></li>
+            <li class="item md c htmlOrange">HTML</li>
+            <li class="item md c cssBlue">CSS</li>
+          </ol>
+      </section>
+      <section data-title="Portfolio">
+        <article>
+          <h1>Portfolio</h1>
+          <p>Now it is time to jump in to some real action. Please pick any content you like from the below mosaic to see a sample demo page. To prepare you for the unknown, I gave a short description under each tile so you can easly see what relam of code
+            you will be entering. Feel free to visit them all.</p>
+        </article>
+        <aside>
+          <ol class="portfolio c">
+            <li class="imgItem">
+              <a href="html/demo1.html" target="_blank">
+                <figure>
+                  <img src="img/main/1.jpg" alt="Portfolio item 1">
+                  <figcaption class="md l">HTML | Bootstrap | jQuery</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="imgItem">
+              <a href="html/demo2.html" target="_blank">
+                <figure>
+                  <img src="img/main/2.jpg" alt="Portfolio item 2">
+                  <figcaption class="md l">Comming | Soon</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="imgItem">
+              <a href="html/demo3.html" target="_blank">
+                <figure>
+                  <img src="img/main/3.jpg" alt="Portfolio item 3">
+                  <figcaption class="md l">Comming | Soon</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ol>
+        </aside>
+      </section>
+    </main>
+    <footer role="contentinfo">
+      <section data-title="Contact">
+        <ol class="c md">
+          <li>Questions? feedback? I Will take them all!
+            <br>Go ahead and contact me by any of the following methods.</li>
+          <li class="social">
+            <a href="https://www.facebook.com/nightkn8" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
+            <a href="https://nightkn8.deviantart.com" target="_blank"><i class="fa fa-deviantart fa-3x"></i></a>
+            <a href="https://github.com/NightKn8" target="_blank"><i class="fa fa-github-square fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/www.linkedin.com/in/kjedraszewski" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
+          </li>
+          <li class="cc"> Krzysztof Jedraszewski<b></b></li>
+        </ol>
+      </section>
+    </footer>
+  </body>
+
 </html>

@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css?family=Waiting for the Sunrise|Galada|Griffy|Jolly Lodger|Spicy Rice|PT Sans');
+
+/*BEGIN CSS MAP*/
+/*Global*/
+/*Header*/
+/*Navigation*/
+/*Icons*/
+/*Thumbnail*/
+/*Carousel*/
+/*Tabs*/
+/*Footer*/
+/*END CSS MAP*/
+
+/*------------------------------------------Global------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  position: relative;
+  font-family: "PT Sans";
+  display: relative;
+}
+
+body mark {
+  color: #71c800;
+  background-color: transparent;
+  padding: 0px;
+  white-space: nowrap;
+}
+
+cite {
+  color: #cbcbcb;
+}
+
+i {
+  margin: 5px;
+  padding: 5px;
+}
+
+p {
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.beerlight {
+  background-color: #f9f9f9;
+  color: #212121;
+}
+
+.beerdark {
+  background-color: #313131;
+  color: #f9f9f9;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadable {
+  display: none;
+}
+
+.fadeIn {
+  display: block;
+  -webkit-animation: fade 1s both;
+  animation: fade 1s both;
+}
+
+.row,
+section {
+  height: 100%;
+}
+
+
+/*------------------------------------------Header------------------------------------------*/
+
+.banner {
+  background: url('../img/demo1/demo1head.jpg') top center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 350px;
+  -webkit-box-shadow: inset 0px 0px 165px -9px rgba(33, 33, 33, 1);
+  -moz-box-shadow: inset 0px 0px 165px -9px rgba(33, 33, 33, 1);
+  box-shadow: inset 0px 0px 165px -9px rgba(33, 33, 33, 1);
+}
+
+.banner img {
+  height: 300px;
+}
+
+
+/*------------------------------------------Navigation------------------------------------------*/
+
+.navbar {
+  color: #212121;
+  margin-bottom: 0px;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.brandLogo {
+  height: 85px;
+  width: 150px;
+  background: url('../img/demo1/logosmall.png') top center / cover no-repeat;
+  background-size: auto 100%;
+  transition: height .3s, width .3s;
+}
+
+.brandLogoSmall {
+  height: 60px;
+  width: 125px;
+  transition: height .3s, width .3s;
+}
+
+.brandLogo:focus,
+.brandLogo:hover {
+  background: url('../img/demo1/logosmallactive.png') top center / cover no-repeat;
+  background-size: auto 100%;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  color: #212121;
+  background-color: #cbcbcb;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+  color: #ffc938;
+  background-color: transparent;
+}
+
+.navbar-default {
+  background-color: #f9f9f9;
+  border-bottom: solid 3px #181818;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar li a {
+  padding: 20px 20px;
+}
+
+.navbar-default .navbar-collapse {
+  z-index: -1;
+}
+
+.affix {
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.affix ~ .container-fluid {
+  position: relative;
+  top: 60px;
+}
+
+.affixShrink {
+  -webkit-animation: affixShrink 0.3s both 1;
+  animation: affixShrink 0.3s both 1;
+}
+
+.affixExpand {
+  -webkit-animation: affixExpand 0.3s both 1;
+  animation: affixExpand 0.3s both 1;
+}
+
+.navbar-collapse.collapsing {
+  -webkit-transition: height .3s;
+  -moz-transition: height .3s;
+  -ms-transition: height .3s;
+  -o-transition: height .3s;
+  transition: height .3s;
+}
+
+
+/*------------------------------------------Icons------------------------------------------*/
+
+.container.icons h1 {
+  color: #71c800;
+}
+
+.container.icons p {
+  color: #f9f9f9;
+  font-size: 20px;
+}
+
+.blackBoard {
+  background: url('../img/demo1/blackb.jpg') center center / cover no-repeat;
+  padding-bottom: 140px;
+}
+
+.handwritten {
+  font-family: 'Waiting for the Sunrise';
+  color: #f9f9f9;
+}
+
+.arrow {
+  background: url('../img/demo1/arrow.png') center center no-repeat;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+i[class*='heart'],
+i[class*='send'],
+i[class*='leaf'] {
+  font-size: 200px;
+  background: url('../img/demo1/chalk.jpg') center center / cover no-repeat;
+  color: #f9f9f9;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+i[class*='database'] {
+  position: absolute;
+  width: 100%;
+  font-size: 100px;
+  top: 40px;
+  left: -3px;
+  background: url('../img/demo1/blackb.jpg') center center no-repeat;
+  color: #f9f9f9;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: #f9f9f9;
+}
+
+
+/*------------------------------------------Thumbnail------------------------------------------*/
+
+.calendarBody {
+  height: 100%;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  font-family: 'Galada';
+  color: #71c800;
+}
+
+.calendarBody p {
+  font-size: 45px;
+  padding: 0 70px;
+  color: #313131;
+}
+
+.calendarContent {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  color: #ffc938;
+}
+
+.calendarRight {
+  align-self: center;
+}
+
+i[class*='calendar'] {
+  font-size: 400px;
+  position: relative;
+  top: -140px;
+  right: 10px;
+  margin-bottom: -110px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-linear-gradient(top, #f9f9f9 0%, #f9f9f9 30%, #313131 30%, #313131 100%);
+  background-image: -o-linear-gradient(top, #f9f9f9 0%, #f9f9f9 30%, #313131 30%, #313131 100%);
+  background-image: -moz-linear-gradient(top, #f9f9f9 0%, #f9f9f9 30%, #313131 30%, #313131 100%);
+  background-image: linear-gradient(to bottom, #f9f9f9 0%, #f9f9f9 30%, #313131 30%, #313131 100%);
+}
+
+i[class*='beer'] {
+  font-size: 140px;
+  color: #ffc938;
+}
+
+i[class*='certificate'] {
+  font-size: 140px;
+}
+
+.cert {
+  color: transparent;
+  text-shadow: 0px 7px 3px rgba(255, 255, 255, 0.2);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.first {
+  background-color: #ffc938;
+}
+
+.second {
+  background-color: #cbcbcb;
+}
+
+.third {
+  background-color: #ee7f4a;
+}
+
+.no {
+  font-size: 50px;
+  position: absolute;
+  top: 50px;
+  color: #f9f9f9;
+  width: 100%;
+  margin: 0 -15px;
+  font-family: 'Galada';
+}
+
+.thumbnail img {
+  height: 400px;
+}
+
+figure.thumbnail {
+  border: none;
+  border-radius: 0;
+}
+
+figcaption {
+  position: relative;
+}
+
+figcaption h3 {
+  font-size: 40px;
+}
+
+.luluBay {
+  font-family: 'Griffy';
+}
+
+.otherSide {
+  font-family: 'Jolly Lodger';
+}
+
+.routeSix {
+  font-family: 'Spicy Rice';
+}
+
+
+/*------------------------------------------Carousel------------------------------------------*/
+
+.achieve {
+  padding: 50px 0;
+}
+
+.item {
+  height: 600px;
+  background-color: #f9f9f9;
+}
+
+.noPadding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+i[class*='comment'] {
+  font-size: 400px;
+}
+
+.carousel-caption {
+  color: #313131;
+  text-align: center;
+  text-shadow: none;
+}
+
+.carousel-control.left {
+  background-image: none;
+  color: #313131;
+  text-shadow: none;
+}
+
+.carousel-control.right {
+  background-image: none;
+  color: #313131;
+  text-shadow: none;
+}
+
+.carousel-indicators li {
+  border: 1px solid #313131;
+}
+
+.carousel-indicators .active {
+  background-color: #313131;
+}
+
+.parallaxTop {
+  background: url('../img/demo1/pxHand.png') center center / cover no-repeat;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  width: 403px;
+  height: 298px;
+  z-index: 2;
+}
+
+.parallaxMiddle {
+  background: url('../img/demo1/pxCaps.png') center center / cover no-repeat;
+  position: absolute;
+  right: 50%;
+  -ms-transform: translate(50%, 0);
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  width: 109px;
+  height: 117px;
+  z-index: 4;
+}
+
+.parallaxBottom {
+  background: url('../img/demo1/pxBeer.png') center center / cover no-repeat;
+  position: absolute;
+  right: 50%;
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  width: 406px;
+  height: 443px;
+  z-index: 2;
+}
+
+.circleChart::before {
+  position: absolute;
+  content: '';
+  width: 350px;
+  height: 350px;
+  border-radius: 350px;
+  -webkit-box-shadow: inset 0px -7px 0px #ffffff;
+  -moz-box-shadow: inset 0px -7px 0px #ffffff;
+  box-shadow: inset 0px -7px 0px #ffffff;
+}
+
+.circleChart {
+  display: flex;
+  color: #f9f9f9;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 470px;
+  height: 470px;
+  border-radius: 470px;
+  font-size: 90px;
+  text-shadow: 0px 2px #643a27;
+  font-weight: bold;
+}
+
+.circleChart::after {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(data-value);
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  background: url('../img/demo1/malt.png') center center no-repeat #f9f9f9;
+  border: solid 16px rgba(249, 249, 249, 0.8);
+}
+
+.gradientChart::before {
+  background: -webkit-linear-gradient(bottom, #ffc938 0%, #ffde87 80%, #ffffff 80%, #ffffff 95%, transparent 95%, transparent 100%) no-repeat;
+  background: -o-linear-gradient(bottom, #ffc938 0%, #ffde87 80%, #ffffff 80%, #ffffff 95%, transparent 95%, transparent 100%) no-repeat;
+  background: -moz-linear-gradient(bottom, #ffc938 0%, #ffde87 80%, #ffffff 80%, #ffffff 95%, transparent 95%, transparent 100%) no-repeat;
+  background: linear-gradient(to top, #ffc938 0%, #ffde87 80%, #ffffff 80%, #ffffff 95%, transparent 95%, transparent 100%) no-repeat;
+  -webkit-animation: chartWave 10s both infinite linear;
+  animation: chartWave 10s both infinite linear;
+}
+
+.moveChart::before {
+  -webkit-animation: chartMoveUp 3s both linear;
+  animation: chartMoveUp 3s both linear;
+}
+
+
+/*------------------------------------------Tabs------------------------------------------*/
+
+.wood {
+  background: url('../img/demo1/wood.jpg') center center / cover no-repeat;
+  font-family: 'Galada';
+  color: #2d1000;
+  text-shadow: -1px -1px 0 #cfa68c, 1px -1px 0 #c89c7e, -1px 1px 0 #643a27, 1px 1px 0 #643a27;
+}
+
+.wood::before {
+  display: block;
+  content: '';
+  background: url('../img/demo1/border.png') repeat;
+  width: 100%;
+  height: 43px;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.wood::after {
+  display: block;
+  content: '';
+  background: url('../img/demo1/border.png') repeat;
+  width: 100%;
+  height: 43px;
+}
+
+.wood h1 {
+  font-size: 35px;
+}
+
+.wood .title {
+  font-size: 23px;
+  padding: 0 10px;
+}
+
+.nav-pills {
+  background: #313131;
+  text-shadow: none;
+  display: flex;
+  flex-flow: row nowrap;
+  white-space: nowrap;
+  align-content: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.nav-pills > li {
+  flex: 1 auto;
+}
+
+.nav-pills > li a {
+  border-radius: 0px;
+  padding: 15px 0;
+  color: #f9f9f9;
+  border-bottom: solid 5px transparent;
+  border-top: solid 5px transparent;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+  color: #f9f9f9;
+  background-color: #313131;
+  border-bottom: solid 5px #71c800;
+  border-top: solid 5px transparent;
+}
+
+.nav-pills>li>a:focus,
+.nav-pills>li>a:hover {
+  background-color: #f9f9f9;
+  color: #313131;
+  border-bottom: solid 5px #f9f9f9;
+  border-top: solid 5px transparent;
+}
+
+.tab-content {
+  padding-left: 20px;
+  height: 100%;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.tab-content img {
+  position: relative;
+  width: 700px;
+}
+
+.tab-content p {
+  font-size: 30px;
+}
+
+.tab-content h3 {
+  font-size: 50px;
+}
+
+
+/*------------------------------------------Footer------------------------------------------*/
+
+footer {
+  border-top: solid 5px #71c800;
+  height: 100%;
+  color: #f9f9f9;
+  background-color: #313131;
+}
+
+footer i {
+  color: #71c800;
+  cursor: pointer;
+}
+
+footer h1 {
+  font-size: 30px;
+}
+
+footer h3 {
+  font-size: 22px;
+}
+
+i[class*='square'] {
+  font-size: 50px;
+  padding: 10px;
+}
+
+.contact {
+  padding-bottom: 20px;
+}
+
+i[class*='chevron'] {
+  font-size: 30px;
+}
+
+.dark {
+  background-color: #181818;
+  cursor: pointer;
+}
+
+.dark p:first-of-type {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dark p:last-of-type {
+  margin: 0;
+  font-size: 14px;
+}
+
+@-webkit-keyframes affixExpand {
+  from {
+    top: 60px;
+  }
+  to {
+    top: 406px;
+  }
+}
+
+@-webkit-keyframes affixShrink {
+  from {
+    top: 406px;
+  }
+  to {
+    top: 60px;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes chartMoveUp {
+  from {
+    background-position: 0 350px;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-webkit-keyframes chartWave {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -ms-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes affixExpand {
+  from {
+    top: 60px;
+  }
+  to {
+    top: 377px;
+  }
+}
+
+@keyframes affixShrink {
+  from {
+    top: 377px;
+  }
+  to {
+    top: 60px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes chartMoveUp {
+  from {
+    background-position: 0 350px;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes chartWave {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -ms-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
