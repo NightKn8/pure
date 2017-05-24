@@ -271,6 +271,7 @@ i[class*='database'] {
   position: absolute;
   top: 10px;
   width: 100%;
+  margin:0;
   color: #ffc938;
 }
 
@@ -282,7 +283,6 @@ i[class*='calendar'] {
   font-size: 400px;
   position: relative;
   top: -140px;
-  right: 10px;
   margin-bottom: -110px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -296,6 +296,7 @@ i[class*='calendar'] {
 
 i[class*='beer'] {
   font-size: 140px;
+  margin-left: -10px;
   color: #ffc938;
 }
 
@@ -658,7 +659,6 @@ i[class*='chevron'] {
   i[class*='calendar'] {
     font-size: 320px;
     top: -115px;
-    right: 0px;
   }
   .calendarBody p {
     font-size: 30px;
@@ -666,7 +666,6 @@ i[class*='chevron'] {
   .calendarContent h1 {
     position: relative;
     font-size: 35px;
-    left: 13px;
     top: -33px;
   }
   i[class*='comment'] {
