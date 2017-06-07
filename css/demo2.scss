@@ -1,0 +1,107 @@
+$primary-color: #333;
+$secondary-color: #333;
+$accent-color: #333;
+
+@mixin flexRow($display: flex, $flexflow: row wrap, $just: center){
+     display: $display;
+   flex-flow: $flexflow;
+    justify-content: $just;
+    align-items: $just;
+    text-align: $just;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body{
+    @extend html;
+    background-color: #FFF;
+}
+.fadeOut {
+opacity: 0;
+}
+.curtain{
+    @extend html;
+  @include flexRow;
+z-index: 99;
+background-color:  rgba(0, 0, 0, .7);
+}
+
+ol{
+list-style-type:none;
+margin-left: 20px;
+li{
+    display:flex;
+   
+>* {
+    flex: 0 0 auto;
+     padding: 10px 0px;
+     &:hover{
+        cursor: pointer;
+}
+}
+      
+     
+}
+}
+
+
+#messageBody{
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+    z-index: 100;
+    background-color: red;
+    a{
+    cursor:help;    
+    }
+}
+button {
+    color:#FFF;
+    display:inline-block;
+    border-style:none;
+  padding: 15px;
+  margin:20px;
+  width: 100px;
+  &:hover {
+background-color:blue;
+  }
+
+}
+.back{
+  @include flexRow;
+    position: absolute;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+img{
+ width: 200px;
+}
+.side{
+  @include flexRow;
+  width: 100%;
+}
+.inside{
+  @include flexRow;
+  width: 100%;
+}

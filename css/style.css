@@ -342,7 +342,7 @@ figcaption {
   background-color: rgba(49, 44, 50, .8);
   padding-left: 10px;
   width: 90%;
-  height: 25px;
+  height: auto;
   pointer-events: none;
 }
 
