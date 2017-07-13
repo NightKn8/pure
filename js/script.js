@@ -4,7 +4,7 @@ window.onload = () => {
   window.scrollTo(0, 1); // IE HAX
   window.scrollTo(0, 0); // IE HAX
   const year = new Date().getFullYear();
-  document.querySelector(".cc").insertAdjacentHTML('afterbegin', '&copy ' + year);
+  document.querySelector(".cc").insertAdjacentHTML('afterbegin', `&copy  ${year}`);
   makeNavigation("section", "nav");
   progressBar();
   window.addEventListener('click', (e) => {

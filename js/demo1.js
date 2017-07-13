@@ -49,7 +49,7 @@ $(document).ready(() => {
     if ($(".active").hasClass("chart")) {
       const $chartIncrement = setInterval(() => {
         const $circle = $(".circleChart");
-        $circle.attr("data-value", inc + "%");
+        $circle.attr("data-value", `${inc}%`);
         switch (inc) {
           case 95:
             $circle.removeClass("moveChart");
@@ -85,7 +85,7 @@ $(document).ready(() => {
       const loadOnDemand = () => {
         const $index = $(hash).index(".loadable") + 1;
         if ($index) {
-          $(".loadable:lt(" + $index + ")").addClass("fadeIn");
+          $(`.loadable:lt(${$index})`).addClass("fadeIn");
           def.resolve();
         } else {
           def.reject();

@@ -1,16 +1,31 @@
-$primary-color: #333;
-$secondary-color: #333;
-$accent-color: #333;
-
-@mixin flexRow($display: flex, $flexflow: row wrap, $just: center){
-     display: $display;
-   flex-flow: $flexflow;
-    justify-content: $just;
-    align-items: $just;
-    text-align: $just;
+@import url('https://fonts.googleapis.com/css?family=Bungee|Iceland');
+$primary-font: 'Bungee',
+sans-serif;
+$secondary-font: 'Iceland',
+sans-serif;
+@mixin font($family,
+$size) {
+  font-family: $family;
+  font-size: $size;
 }
 
-
+$green: #61BB46;
+$yellow: #FDB827;
+$orange: #F5821F;
+$red: #E03a3e;
+$violet: #963D97;
+$blue: #009DDC;
+$gray: #eeeeee;
+$white: #FFFFFF;
+@mixin flex($flexflow,
+$display: flex,
+$just: center) {
+  display: $display;
+  flex-flow: $flexflow;
+  justify-content: $just;
+  align-items: $just;
+  text-align: $just;
+}
 
 * {
   box-sizing: border-box;
@@ -23,85 +38,278 @@ $accent-color: #333;
 html {
   width: 100%;
   height: 100%;
+  position: relative;
 }
-body{
-    @extend html;
-    background-color: #FFF;
+
+body {
+  @extend html;
+  @include font($primary-font, 24px);
+  background-color: $yellow;
 }
+
 .fadeOut {
-opacity: 0;
-}
-.curtain{
-    @extend html;
-  @include flexRow;
-z-index: 99;
-background-color:  rgba(0, 0, 0, .7);
+  opacity: 0;
 }
 
-ol{
-list-style-type:none;
-margin-left: 20px;
-li{
-    display:flex;
-   
->* {
-    flex: 0 0 auto;
-     padding: 10px 0px;
-     &:hover{
-        cursor: pointer;
-}
-}
-      
-     
-}
+.curtain {
+  @extend html;
+  @include flex(row wrap);
+  position: absolute;
+  z-index: 99;
+  background-color: $orange;
 }
 
-
-#messageBody{
-    width: 500px;
-    height: 300px;
-    border-radius: 30px;
-    z-index: 100;
-    background-color: red;
-    a{
-    cursor:help;    
+ol {
+  list-style-type: none;
+  li>* {
+    padding: 10px 0 0 0;
+    margin: 0;
+    &:hover {
+      cursor: pointer;
+      color: $green;
     }
-}
-button {
-    color:#FFF;
-    display:inline-block;
-    border-style:none;
-  padding: 15px;
-  margin:20px;
-  width: 100px;
-  &:hover {
-background-color:blue;
   }
-
 }
-.back{
-  @include flexRow;
-    position: absolute;
-    background-color: blue;
-    border-radius: 10px;
-    padding: 10px;
-    bottom: 20px;
-    left: 20px;
+
+#displayBox {
+  @extend html;
+}
+
+#scoreBody {
+  @extend html;
+  @include flex(column nowrap);
+  justify-content: flex-start;
+  >* {
+    flex: 0 15%;
+  }
+  #scores {
+    @media screen and (max-width: 550px) {
+      @include font($secondary-font, 14px);
+    }
+    word-break: break-all;
+    margin: 0 auto;
+    @include font($secondary-font, 24px);
+    width: 90%;
+    overflow-y: scroll;
+    flex:0 70%;
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $blue;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    &::-webkit-scrollbar-thumb:window-inactive {
+      background: $blue;
+    }
+    div {
+      @include flex(row wrap);
+      flex: 1 100%;
+      span {
+        @include flex(row wrap);
+        flex: 1 20%;
+        height: 80px;
+        border: 1px solid $orange;
+      }
+    }
+  }
+}
+
+.embImg {
+  width: 80px;
+  @media screen and (max-width: 550px) {
+    width: 30px;
+  }
+}
+
+#messageBody {
+  @include flex(row wrap);
+  @include font($secondary-font, 23px);
+  width: 310px;
+  height: 210px;
+  border-radius: 30px;
+  z-index: 100;
+  padding: 15px;
+  background-color: $gray;
+  a {
+    cursor: help;
+    &:link {
+      color: $blue;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $blue;
+    }
+  }
+}
+
+button {
+  @include font($secondary-font, 23px);
+  color: $white;
+  display: inline-block;
+  border-style: none;
+  padding: 15px;
+  margin: 15px;
+  width: 100px;
+  background-color: $blue;
+  cursor: pointer;
+  &#deny:hover {
+    background-color: $red;
+  }
+  &#allow:hover {
+    background-color: $green;
+  }
+  &#go {
+    width: 150px;
+    transition: background-color 1s;
+    &:hover {
+      animation: flash 0.3s both infinite;
+      -webkit-animation: flash 0.3s both infinite;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+  color: $blue;
+  text-shadow: 1px 1px $violet, 2px 2px $violet;
+}
+
+footer {
+  text-align: center;
+  @include font($secondary-font, 22px);
+  color: $blue;
+  padding: 5px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+#iD {
+  @include font($secondary-font, 18px);
+  color: $violet;
+  padding: 5px 5px;
+  margin: 5px 0;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    background-color: $blue;
+  }
+  50% {
+    background-color: $violet;
+  }
+  100% {
+    background-color: $blue;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: $blue;
+  }
+  50% {
+    background-color: $violet;
+  }
+  100% {
+    background-color: $blue;
+  }
+}
+
+.back {
+  @include flex(row wrap);
+  @include font($secondary-font, 23px);
+  position: fixed;
+  background-color: $blue;
+  color: $white;
+  padding: 10px;
+  bottom: 30px;
+  left: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: $violet;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+#cpuImg {
+  &:hover {
+    cursor: help;
+  }
+}
+
+img {
+  width: 180px;
+  margin: 0px 10px;
+  @media screen and (max-width: 550px) {
+    width: 80px;
+  }
+  &:hover {
     cursor: pointer;
+  }
 }
 
-.hide{
-    display: none;
+#gameTable {
+  figcaption {
+    @media screen and (max-width: 550px) {
+      @include font($primary-font, 16px);
+    }
+  }
+  .widget {
+    @include flex(column nowrap);
+    color: $violet;
+    align-items: flex-start;
+    >div {
+      @include font($secondary-font, 33px);
+      flex: 1 100%;
+      @media screen and (max-width: 550px) {
+        @include font($secondary-font, 25px);
+      }
+    }
+    >span {
+      @include font($secondary-font, 27px);
+      @media screen and (max-width: 550px) {
+        @include font($secondary-font, 22px);
+      }
+      flex: 1 100%;
+    }
+  }
+  .side {
+    @include flex(column nowrap);
+    width: 100%;
+    flex: 0 40%;
+    >* {
+      flex: 1 100%;
+    }
+    >#images {
+      @include flex(row nowrap);
+      margin-top: 20px;
+      >* {
+        flex: 1 33%;
+      }
+    }
+  }
+  #inside {
+    @include font($primary-font, 33px);
+    flex: 0 20%;
+    text-align: center;
+    background-color: $orange;
+    color: $violet;
+    @media screen and (max-width: 550px) {
+      @include font($primary-font, 24px);
+    }
+  }
 }
 
-img{
- width: 200px;
-}
-.side{
-  @include flexRow;
-  width: 100%;
-}
-.inside{
-  @include flexRow;
-  width: 100%;
+.avoid-clicks {
+  pointer-events: none;
 }

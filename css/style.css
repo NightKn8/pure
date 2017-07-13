@@ -27,6 +27,7 @@ p {}
 
 aside {
   height: auto;
+  padding-bottom: 10px;
 }
 
 article {
@@ -226,6 +227,13 @@ main section {
   height: auto;
 }
 
+.also {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: auto;
+}
+
 .skils ol {
   display: flex;
   flex-flow: column wrap;
@@ -303,6 +311,22 @@ main section {
 
 .queryBlue {
   color: #0868ab;
+}
+
+.reactBlue {
+  color:#00d8ff;
+}
+
+.babelYellow {
+  color:#f5da55;
+}
+
+.sassPink {
+  color:#d75893;
+}
+
+.ajaxBlue {
+  color:#0272bc;
 }
 
 .portfolio {
@@ -458,6 +482,7 @@ footer b {
   }
   .navigation,
   .skils,
+  .also,
   .portfolio,
   footer ol {
     flex-flow: column wrap;
