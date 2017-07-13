@@ -1,6 +1,6 @@
 let itIsStoarge,
   isGame = false,
-  round = 0,
+  round = 1,
   allowStoarge = (localStorage.allowance === undefined) ? false : localStorage.allowance,
   path = "../img/demo2/";
 class player {
@@ -64,7 +64,7 @@ class showMenu {
     document.getElementById("scoreBoard").addEventListener("click", gameLoop.bind(null, "scoreBoard"), false);
   };
   render() {
-    this.nGame = (round > 0 || isGame) ? "<h1>Continue</h1>" : "<h1>New Game</h1>";
+    this.nGame = (round > 1 || isGame) ? "<h1>Continue</h1>" : "<h1>New Game</h1>";
     this.dom.innerHTML = `
    <section id="mainMenu">
       <ol>
@@ -103,7 +103,7 @@ class scoreBoard {
       }
       return `
       <div>
-        <span>${this.round--}</span>
+        <span>${--this.round}</span>
         <span>${winner}</span>
         <span>${loser}</span>
         <span><img class='embImg' src='${path}${winnerElement.toLowerCase()}Small.png' alt='${winnerElement}'></span>
@@ -174,7 +174,7 @@ class gamePlay {
         };
         this.timer = setTimeout(() => {
           gameTable.classList.remove("avoid-clicks");
-          document.getElementById("inside").innerHTML = `Round: ${round+1}`;
+          document.getElementById("inside").innerHTML = `Round: ${round}`;
           rockPick.src = rock.src();
           paperPick.src = paper.src();
           scissorsPick.src = scissors.src();
@@ -194,7 +194,7 @@ class gamePlay {
           </figure>
         </aside>
         <aside id="inside">
-        Round: ${round+1}
+        Round: ${round}
         </aside>
         <aside class="side">
           <span id="images">
