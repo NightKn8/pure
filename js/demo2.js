@@ -174,7 +174,7 @@ class gamePlay {
         };
         this.timer = setTimeout(() => {
           gameTable.classList.remove("avoid-clicks");
-          document.getElementById("inside").innerHTML = `Round: ${round}`;
+          document.getElementById("inside").innerHTML = `Round: ${round+1}`;
           rockPick.src = rock.src();
           paperPick.src = paper.src();
           scissorsPick.src = scissors.src();
@@ -194,7 +194,7 @@ class gamePlay {
           </figure>
         </aside>
         <aside id="inside">
-        Round: ${round}
+        Round: ${round+1}
         </aside>
         <aside class="side">
           <span id="images">
