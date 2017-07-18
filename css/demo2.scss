@@ -17,9 +17,9 @@ $violet: #963D97;
 $blue: #009DDC;
 $gray: #eeeeee;
 $white: #FFFFFF;
-@mixin flex($flexflow,
-$display: flex,
-$just: center) {
+@mixin flex($flexflow, $display: flex, $just: center) {
+  display: -webkit-flex;
+  -webkit-flex-flow: $flexflow;
   display: $display;
   flex-flow: $flexflow;
   justify-content: $just;
@@ -80,6 +80,7 @@ ol {
   @include flex(column nowrap);
   justify-content: flex-start;
   >* {
+    -webkit-flex: 0 15%;
     flex: 0 15%;
   }
   #scores {
@@ -91,6 +92,7 @@ ol {
     @include font($secondary-font, 24px);
     width: 90%;
     overflow-y: scroll;
+    -webkit-flex:0 70%;
     flex:0 70%;
     &::-webkit-scrollbar {
       width: 12px;
@@ -107,9 +109,11 @@ ol {
     }
     div {
       @include flex(row wrap);
+      -webkit-flex: 1 100%;
       flex: 1 100%;
       span {
         @include flex(row wrap);
+        -webkit-flex: 1 20%;
         flex: 1 20%;
         height: 80px;
         border: 1px solid $orange;
@@ -268,46 +272,45 @@ img {
     @include flex(column nowrap);
     color: $violet;
     align-items: flex-start;
-    height: auto;
     >div {
       @include font($secondary-font, 33px);
+      -webkit-flex: 1 100%;
       flex: 1 100%;
-      height: 33px;
       @media screen and (max-width: 550px) {
         @include font($secondary-font, 25px);
-        height: 25px;
       }
     }
     >span {
       @include font($secondary-font, 27px);
-      height: 27px;
       @media screen and (max-width: 550px) {
         @include font($secondary-font, 22px);
-        height:22px;
       }
+      -webkit-flex: 1 100%;
       flex: 1 100%;
     }
   }
   .side {
     @include flex(column nowrap);
     width: 100%;
+    -webkit-flex: 0 40%;
     flex: 0 40%;
-    height: 40%;
     >* {
+      -webkit-flex: 1 100%;
       flex: 1 100%;
     }
     >#images {
       @include flex(row nowrap);
       margin-top: 20px;
       >* {
+        -webkit-flex: 1 33%;
         flex: 1 33%;
       }
     }
   }
   #inside {
     @include font($primary-font, 33px);
+    -webkit-flex: 0 20%;
     flex: 0 20%;
-    height: 20%;
     text-align: center;
     background-color: $orange;
     color: $violet;

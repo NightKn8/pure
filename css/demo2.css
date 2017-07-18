@@ -20,6 +20,8 @@ body {
   opacity: 0; }
 
 .curtain {
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -39,6 +41,8 @@ ol {
       color: #61BB46; }
 
 #scoreBody {
+  display: -webkit-flex;
+  -webkit-flex-flow: column nowrap;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -46,6 +50,7 @@ ol {
   text-align: center;
   justify-content: flex-start; }
   #scoreBody > * {
+    -webkit-flex: 0 15%;
     flex: 0 15%; }
   #scoreBody #scores {
     word-break: break-all;
@@ -54,6 +59,7 @@ ol {
     font-size: 24px;
     width: 90%;
     overflow-y: scroll;
+    -webkit-flex: 0 70%;
     flex: 0 70%; }
     @media screen and (max-width: 550px) {
       #scoreBody #scores {
@@ -69,18 +75,24 @@ ol {
     #scoreBody #scores::-webkit-scrollbar-thumb:window-inactive {
       background: #009DDC; }
     #scoreBody #scores div {
+      display: -webkit-flex;
+      -webkit-flex-flow: row wrap;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
       align-items: center;
       text-align: center;
+      -webkit-flex: 1 100%;
       flex: 1 100%; }
       #scoreBody #scores div span {
+        display: -webkit-flex;
+        -webkit-flex-flow: row wrap;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
         text-align: center;
+        -webkit-flex: 1 20%;
         flex: 1 20%;
         height: 80px;
         border: 1px solid #F5821F; }
@@ -92,6 +104,8 @@ ol {
       width: 30px; } }
 
 #messageBody {
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -174,6 +188,8 @@ footer {
   100% {
     background-color: #009DDC; } }
 .back {
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -211,45 +227,50 @@ img {
     font-family: "Bungee", sans-serif;
     font-size: 16px; } }
 #gameTable .widget {
+  display: -webkit-flex;
+  -webkit-flex-flow: column nowrap;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #963D97;
-  align-items: flex-start;
-  height: auto; }
+  align-items: flex-start; }
   #gameTable .widget > div {
     font-family: "Iceland", sans-serif;
     font-size: 33px;
-    flex: 1 100%;
-    height: 33px; }
+    -webkit-flex: 1 100%;
+    flex: 1 100%; }
     @media screen and (max-width: 550px) {
       #gameTable .widget > div {
         font-family: "Iceland", sans-serif;
-        font-size: 25px;
-        height: 25px; } }
+        font-size: 25px; } }
   #gameTable .widget > span {
     font-family: "Iceland", sans-serif;
     font-size: 27px;
-    height: 27px;
+    -webkit-flex: 1 100%;
     flex: 1 100%; }
     @media screen and (max-width: 550px) {
       #gameTable .widget > span {
         font-family: "Iceland", sans-serif;
-        font-size: 22px;
-        height: 22px; } }
+        font-size: 22px; } }
 #gameTable .side {
+  display: -webkit-flex;
+  -webkit-flex-flow: column nowrap;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
+  -webkit-flex: 0 40%;
   flex: 0 40%; }
   #gameTable .side > * {
+    -webkit-flex: 1 100%;
     flex: 1 100%; }
   #gameTable .side > #images {
+    display: -webkit-flex;
+    -webkit-flex-flow: row nowrap;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -257,10 +278,12 @@ img {
     text-align: center;
     margin-top: 20px; }
     #gameTable .side > #images > * {
+      -webkit-flex: 1 33%;
       flex: 1 33%; }
 #gameTable #inside {
   font-family: "Bungee", sans-serif;
   font-size: 33px;
+  -webkit-flex: 0 20%;
   flex: 0 20%;
   text-align: center;
   background-color: #F5821F;
