@@ -3,8 +3,7 @@ $primary-font: 'Bungee',
 sans-serif;
 $secondary-font: 'Iceland',
 sans-serif;
-@mixin font($family,
-$size) {
+@mixin font($family,$size) {
   font-family: $family;
   font-size: $size;
 }
@@ -17,9 +16,7 @@ $violet: #963D97;
 $blue: #009DDC;
 $gray: #eeeeee;
 $white: #FFFFFF;
-@mixin flex($flexflow, $display: flex, $just: center) {
-  display: -webkit-flex;
-  -webkit-flex-flow: $flexflow;
+@mixin flex($flexflow,$display: flex,$just: center) {
   display: $display;
   flex-flow: $flexflow;
   justify-content: $just;
@@ -43,7 +40,7 @@ html {
 
 body {
   @extend html;
-  @include font($primary-font, 24px);
+  @include font($primary-font,24px);
   background-color: $yellow;
 }
 
@@ -80,7 +77,6 @@ ol {
   @include flex(column nowrap);
   justify-content: flex-start;
   >* {
-    -webkit-flex: 0 15%;
     flex: 0 15%;
   }
   #scores {
@@ -89,10 +85,9 @@ ol {
     }
     word-break: break-all;
     margin: 0 auto;
-    @include font($secondary-font, 24px);
+    @include font($secondary-font,24px);
     width: 90%;
     overflow-y: scroll;
-    -webkit-flex:0 70%;
     flex:0 70%;
     &::-webkit-scrollbar {
       width: 12px;
@@ -109,11 +104,9 @@ ol {
     }
     div {
       @include flex(row wrap);
-      -webkit-flex: 1 100%;
       flex: 1 100%;
       span {
         @include flex(row wrap);
-        -webkit-flex: 1 20%;
         flex: 1 20%;
         height: 80px;
         border: 1px solid $orange;
@@ -131,7 +124,7 @@ ol {
 
 #messageBody {
   @include flex(row wrap);
-  @include font($secondary-font, 23px);
+  @include font($secondary-font,23px);
   width: 310px;
   height: 210px;
   border-radius: 30px;
@@ -154,7 +147,7 @@ ol {
 }
 
 button {
-  @include font($secondary-font, 23px);
+  @include font($secondary-font,23px);
   color: $white;
   display: inline-block;
   border-style: none;
@@ -187,7 +180,7 @@ h1 {
 
 footer {
   text-align: center;
-  @include font($secondary-font, 22px);
+  @include font($secondary-font,22px);
   color: $blue;
   padding: 5px 0;
   width: 100%;
@@ -196,7 +189,7 @@ footer {
 }
 
 #iD {
-  @include font($secondary-font, 18px);
+  @include font($secondary-font,18px);
   color: $violet;
   padding: 5px 5px;
   margin: 5px 0;
@@ -228,7 +221,7 @@ footer {
 
 .back {
   @include flex(row wrap);
-  @include font($secondary-font, 23px);
+  @include font($secondary-font,23px);
   position: fixed;
   background-color: $blue;
   color: $white;
@@ -262,62 +255,53 @@ img {
   }
 }
 
-#gameTable {
-  figcaption {
-    @media screen and (max-width: 550px) {
-      @include font($primary-font, 16px);
-    }
-  }
-  .widget {
+#gameBody {
+  @extend html;
+  #gameTable {
     @include flex(column nowrap);
-    color: $violet;
-    align-items: flex-start;
-    >div {
-      @include font($secondary-font, 33px);
-      -webkit-flex: 1 100%;
-      flex: 1 100%;
+    height: auto;
+    figcaption {
       @media screen and (max-width: 550px) {
-        @include font($secondary-font, 25px);
+        @include font($primary-font, 16px);
       }
     }
-    >span {
-      @include font($secondary-font, 27px);
+    .side {
+      @include flex(column nowrap);
+      width: 100%;
+      .widget {
+        height: 60px;
+        @include flex(column nowrap);
+        color: $violet;
+        align-items: flex-start;
+        >div {
+          @include font($secondary-font,33px);
+          flex: 1 100%;
+          @media screen and (max-width: 550px) {
+            @include font($secondary-font, 25px);
+          }
+        }
+        >span {
+          @include font($secondary-font,27px);
+          flex: 1 100%;
+          @media screen and (max-width: 550px) {
+            @include font($secondary-font, 22px);
+          }
+        }
+      }
+      >#images {
+        @include flex(row nowrap);
+        margin-top: 20px;
+      }
+    }
+    #inside {
+      @include font($primary-font,33px);
+      width: 100%;
+      text-align: center;
+      background-color: $orange;
+      color: $violet;
       @media screen and (max-width: 550px) {
-        @include font($secondary-font, 22px);
+        @include font($primary-font, 24px);
       }
-      -webkit-flex: 1 100%;
-      flex: 1 100%;
-    }
-  }
-  .side {
-    @include flex(column nowrap);
-    width: 100%;
-    min-height: 40%;
-    -webkit-flex: 0 40%;
-    flex: 0 40%;
-    >* {
-      -webkit-flex: 1 100%;
-      flex: 1 100%;
-    }
-    >#images {
-      @include flex(row nowrap);
-      margin-top: 20px;
-      >* {
-        -webkit-flex: 1 33%;
-        flex: 1 33%;
-      }
-    }
-  }
-  #inside {
-    @include font($primary-font, 33px);
-    min-height: 20%;
-    -webkit-flex: 0 20%;
-    flex: 0 20%;
-    text-align: center;
-    background-color: $orange;
-    color: $violet;
-    @media screen and (max-width: 550px) {
-      @include font($primary-font, 24px);
     }
   }
 }
