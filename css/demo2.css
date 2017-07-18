@@ -263,6 +263,7 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
+  min-height: 40%;
   -webkit-flex: 0 40%;
   flex: 0 40%; }
   #gameTable .side > * {
@@ -283,6 +284,7 @@ img {
 #gameTable #inside {
   font-family: "Bungee", sans-serif;
   font-size: 33px;
+  min-height: 20%;
   -webkit-flex: 0 20%;
   flex: 0 20%;
   text-align: center;

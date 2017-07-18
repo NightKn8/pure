@@ -292,6 +292,7 @@ img {
   .side {
     @include flex(column nowrap);
     width: 100%;
+    min-height: 40%;
     -webkit-flex: 0 40%;
     flex: 0 40%;
     >* {
@@ -309,6 +310,7 @@ img {
   }
   #inside {
     @include font($primary-font, 33px);
+    min-height: 20%;
     -webkit-flex: 0 20%;
     flex: 0 20%;
     text-align: center;
