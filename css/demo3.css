@@ -59,6 +59,7 @@ a:hover {
 
 #location,
 #temp,
+#time,
 #day {
   flex: 1 100%;
   width: 100%;
