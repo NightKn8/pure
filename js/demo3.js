@@ -9,7 +9,7 @@ class temperatureWidget {
     (this.retry <= 2) ? this.parentDOM.innerHTML = `<section id="tempWidget">LOADING<i class="fa fa-spinner fa-pulse fa-3x"></i></section>`: this.parentDOM.innerHTML = `<section id="tempWidget">LOADING... SERVER WHERE ARE YOU?<i class="fa fa-spinner fa-pulse fa-3x"></i></section>`;
     const request = $.ajax({
       type: 'GET',
-      url: "https://nightkn8.dlinkddns.com/",
+      url: "//nightkn8.dlinkddns.com",
       dataType: "json",
       success: (data) => data
     });
