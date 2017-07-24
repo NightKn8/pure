@@ -59,13 +59,18 @@ a:hover {
 
 #location,
 #temp,
-#day {
+#day,
+#date,
+#time
+ {
   flex: 1 100%;
   width: 100%;
+  height: auto;
 }
 
 #tempWidget {
   width: auto;
+  height: auto;
   -webkit-animation: fadein .5s;
   -moz-animation: fadein .5s;
   -ms-animation: fadein .5s;
@@ -78,9 +83,6 @@ a:hover {
   line-height: 28px;
 }
 
-#date {
-}
-
 #temp {
   font-size: 150px;
   line-height: 150px;
@@ -88,6 +90,7 @@ a:hover {
 
 #day {
   font-size: 45px;
+  line-height: 45px;
 }
 
 #time {
