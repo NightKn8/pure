@@ -46,12 +46,20 @@ a:hover {
   text-decoration: underline;
 }
 
-#container,
+#container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
 #tempWidget,
 #date {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   text-align: center;
   margin: 0 auto;
@@ -69,7 +77,6 @@ a:hover {
 
 #tempWidget {
   width: auto;
-  height: auto;
   -webkit-animation: fadein .5s;
   -moz-animation: fadein .5s;
   -ms-animation: fadein .5s;
