@@ -59,7 +59,6 @@ a:hover {
 
 #location,
 #temp,
-#time,
 #day {
   flex: 1 100%;
   width: 100%;
@@ -79,10 +78,12 @@ a:hover {
   line-height: 28px;
 }
 
-#date {}
+#date {
+}
 
 #temp {
   font-size: 150px;
+  line-height: 150px;
 }
 
 #day {
