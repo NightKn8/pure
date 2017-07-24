@@ -55,8 +55,7 @@ a:hover {
   margin: 0 auto;
 }
 
-#tempWidget,
-#date {
+#tempWidget {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -71,12 +70,13 @@ a:hover {
 #date,
 #time
  {
-  flex: 1 100%;
+  flex: 0 5%;
   width: 100%;
 }
 
 #tempWidget {
   width: auto;
+  height: auto;
   -webkit-animation: fadein .5s;
   -moz-animation: fadein .5s;
   -ms-animation: fadein .5s;
