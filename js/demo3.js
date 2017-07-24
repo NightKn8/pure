@@ -6,7 +6,7 @@ class temperatureWidget {
     this.retry = 0;
   }
   request() {
-    (this.retry < 1) ? this.parentDOM.innerHTML = `<section id="tempWidget">LOADING<i class="fa fa-spinner fa-pulse fa-3x"></i></section>` : (this.retry >= 1 && this.retry <= 3) ? this.parentDOM.innerHTML = `<section id="tempWidget">LOADING... SERVER WHERE ARE YOU?<i class="fa fa-spinner fa-pulse fa-3x"></i></section>`: this.parentDOM.innerHTML = `<section id="tempWidget">LOADING... Remember to accept <a href="https://nightkn8.dlinkddns.com/" target="_blank">THIS CERTIFICATE</a><i class="fa fa-spinner fa-pulse fa-3x"></i></section>`;
+    (this.retry < 1) ? this.parentDOM.innerHTML = `<section id="tempWidget">LOADING<i class="fa fa-spinner fa-pulse fa-3x"></i></section>` : (this.retry >= 1 && this.retry <= 2) ? this.parentDOM.innerHTML = `<section id="tempWidget">LOADING... SERVER WHERE ARE YOU?<i class="fa fa-spinner fa-pulse fa-3x"></i></section>`: this.parentDOM.innerHTML = `<section id="tempWidget">LOADING... Remember to accept <a href="https://nightkn8.dlinkddns.com/">THIS CERTIFICATE</a><i class="fa fa-spinner fa-pulse fa-3x"></i></section>`;
     const request = $.ajax({
       type: 'GET',
       url: "https://nightkn8.dlinkddns.com/app",
