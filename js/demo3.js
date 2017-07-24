@@ -35,7 +35,7 @@ class temperatureWidget {
       this.request();
     }, 10000));
   };
-  render() {
+  render() { 
     return this.parentDOM.innerHTML = `
         <section id="tempWidget">
             <section id="temp">
