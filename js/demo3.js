@@ -12,7 +12,7 @@ class temperatureWidget {
       url: "http://nightkn8.dlinkddns.com",
       dataType: "json",
       success: (data) => data
-    });
+    }); 
     request.done((obj) => {
       clearTimeout(this.retryTimer);
       clearTimeout(this.updateTimer);
